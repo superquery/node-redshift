@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-var commander = require('commander');
-var migrate = require('../lib/migration.js');
-var model = require('../lib/model.js');
+let commander = require('commander');
+let migrate = require('../lib/migration.js');
+let model = require('../lib/model.js');
 
 commander
   .version('0.0.1')
@@ -12,25 +12,25 @@ commander
   .parse(process.argv);
 
 if(commander['migration:create']){
-  var fileName = undefined;
+  let fileName = undefined;
   if(commander["migration:create"] && commander["migration:create"] !== true) fileName = commander["migration:create"];
   migrate.create(fileName);
 }
 
 else if(commander['db:migrate']){
-  var fileNameOrNumber = undefined;
+  let fileNameOrNumber = undefined;
   if(commander["db:migrate"] && commander["db:migrate"] !== true) fileNameOrNumber = commander["db:migrate"];
   migrate.up(fileNameOrNumber);
 }
 
 else if(commander['db:migrate:undo']){
-  var fileNameOrNumber = undefined;
+  let fileNameOrNumber = undefined;
   if(commander["db:migrate:undo"] && commander["db:migrate:undo"] !== true) fileNameOrNumber = commander["db:migrate:undo"];
   migrate.down(fileNameOrNumber);
 }
 
 else if(commander['model:create']){
-  var fileName = undefined;
+  let fileName = undefined;
   if(commander['model:create'] && commander['model:create'] !== true) model.create(commander['model:create']);
   else console.log("Error: Please enter a valid name for the model");
 }

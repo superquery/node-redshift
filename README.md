@@ -29,7 +29,7 @@ Warning!!!!!! This is new and still under development. The API is bound to chang
 ## Installation
 Install the package by running
 ```javascript
-npm install node-redshift
+npm install @superquery/redshift-sql
 ```
 Link to npm repository https://www.npmjs.com/package/node-redshift
 
@@ -38,7 +38,9 @@ Link to npm repository https://www.npmjs.com/package/node-redshift
 The code to connect to redshift should be something like this:
 ```javascript
 //redshift.js
-var Redshift = require('node-redshift');
+var Redshift = require('@superquery/redshift-sql');
+//or
+import RedShift from '@superquery/redshift-sql'
 
 var client = {
   user: user,
