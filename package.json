@@ -1,5 +1,5 @@
 {
-  "name": "redshift-sql",
+  "name": "@superquery/redshift-sql",
   "version": "0.1.5",
   "description": "A simple collection of tools to help you get started with Amazon Redshift from node.js",
   "main": "index.js",
@@ -35,6 +35,7 @@
   "homepage": "https://github.com/dmanjunath/node-redshift#readme",
   "directories": {
     "example": "examples",
-    "lib": "lib"
+    "lib": "lib",
+    "test": "tests"
   }
 }
